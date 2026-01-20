@@ -1,0 +1,50 @@
+:root {
+  --bg-primary: #c8dce8;
+  --bg-content: #f5f9fb;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --accent: #2c5282;
+  --link-color: #1a1a1a;
+  --link-hover: #2c5282;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
