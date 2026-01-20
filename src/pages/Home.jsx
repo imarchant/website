@@ -40,10 +40,10 @@ function Home() {
           <h2>Other</h2>
           <ul className="other-list">
             <li>
-              <a href="#">Academic Writings</a>
+              <Link to="/academic-writings">Academic Writings</Link>
             </li>
             <li>
-              <a href="#">Reading List</a>
+              <Link to="/reading-list">Reading List</Link>
             </li>
           </ul>
         </section>
