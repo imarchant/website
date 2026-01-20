@@ -17,8 +17,9 @@ function Home() {
           <h2>About me</h2>
           <p>
             I am a scientist, writer, speaker, and occasional thinker. I mostly 
-            discuss ideas at the pub, but was told I should write them down. 
+            discuss ideas at the pub, but was told I should write some of them down. 
             Below is a collection of my works proper and works more recently thought up.
+            It is important you know that these are works of opinion based on considered facts.
           </p>
         </section>
 
