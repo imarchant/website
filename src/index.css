@@ -1,13 +1,13 @@
 :root {
-  --bg-primary: #c8dce8;
-  --bg-content: #f5f9fb;
+  --bg-primary: #004889;
+  --bg-content: #ffffff;
   --text-primary: #1a1a1a;
   --text-secondary: #4a4a4a;
-  --accent: #2c5282;
+  --accent: #1b4965;
   --link-color: #1a1a1a;
-  --link-hover: #2c5282;
-  --font-serif: 'Newsreader', Georgia, serif;
-  --font-sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  --link-hover: #1b4965;
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'EB Garamond', Garamond, Georgia, serif;
 }
 
 * {

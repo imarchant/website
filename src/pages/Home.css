@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
 }
 
 .container {
@@ -10,8 +10,8 @@
   width: 100%;
   background-color: var(--bg-content);
   padding: 3.5rem 4rem;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .header {
@@ -91,7 +91,7 @@ h2 {
 /* Responsive */
 @media (max-width: 768px) {
   .home {
-    padding: 2rem 1rem;
+    padding: 0 1rem;
   }
 
   .container {
