@@ -16,18 +16,13 @@ function Home() {
         <section className="about">
           <h2>About me</h2>
           <p>
-            I am a scientist, writer, speaker, and occasional thinker. I mostly 
-            discuss ideas at the pub, but was told I should write some of them down. 
-            Below is a collection of my works proper and works more recently thought up.
-            It is important you know that these are works of opinion based on considered facts.
+            I occasionally write things down. Amongst other things, this website is a place to store 
+            those writings.
           </p>
         </section>
 
         <section className="thoughts">
-          <h2>Thoughts</h2>
-          <p className="section-intro">
-            Essays, notes, and explorations on topics I find interesting.
-          </p>
+          <h2>Writings</h2>
           <ul className="thoughts-list">
             {thoughts.map((thought) => (
               <li key={thought.slug}>
