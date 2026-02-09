@@ -39,6 +39,9 @@ function Home() {
               <Link to="/academic-writings">Academic Writings</Link>
             </li>
             <li>
+              <Link to="/topic-ideas">Topic Ideas</Link>
+            </li>
+            <li>
               <Link to="/reading-list">Reading List</Link>
             </li>
           </ul>
