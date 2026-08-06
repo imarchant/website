@@ -24,97 +24,26 @@ The site will be available at `http://localhost:5173`
 
 ## Use Guide
 
-### Key Files to Edit
+### Adding a New Article
 
-#### 1. `Home.jsx` — Your Landing Page
+Articles auto-register from `src/articles/` — drop a file in, and it shows up
+on the homepage and at its own URL with no other edits needed. See
+[`src/articles/README.md`](src/articles/README.md) for the full guide.
 
-```javascript
-const thoughts = [
-  { slug: 'on-bertrand-russell', title: 'On Bertrand Russell' },
-]
-```
+### Editing Other Pages
 
-This array controls what appears in the "Thoughts" section. Each item needs:
-- `slug` — URL-friendly name (used in the link, e.g., `/article/on-bertrand-russell`)
-- `title` — Display text
-
-```jsx
-<section className="about">
-  <h2>About me</h2>
-  <p>
-    I'm a writer, thinker, and builder. Currently exploring ideas at the 
-    intersection of technology, creativity, and human flourishing. Previously, 
-    I worked on interesting problems at various places, and I'm always looking 
-    for the next intellectual adventure.
-  </p>
-</section>
-```
-
-Edit these `<p>` tags to change your bio text.
-
-#### 2. `Article.jsx` — Your Article Content
-
-```javascript
-const articles = {
-  'on-bertrand-russell': {
-    title: 'On Bertrand Russell',
-    date: 'January 2026',
-    content: `
-      <p>Article content coming soon...</p>
-    `
-  }
-}
-```
-
-This object stores all your articles. Each key must match a `slug` from `Home.jsx`.
-
----
-
-### How To...
-
-#### Add a New Article
-
-**Step 1:** Add the link in `Home.jsx` (line 4-6):
-
-```javascript
-const thoughts = [
-  { slug: 'on-bertrand-russell', title: 'On Bertrand Russell' },
-  { slug: 'new-article', title: 'My New Article' },  // ← Add this
-]
-```
-
-**Step 2:** Add the content in `Article.jsx` (inside the `articles` object):
-
-```javascript
-const articles = {
-  'on-bertrand-russell': {
-    // existing...
-  },
-  'new-article': {                    // ← Must match the slug exactly
-    title: 'My New Article',
-    date: 'January 2026',
-    content: `
-      <p>First paragraph here.</p>
-      <p>Second paragraph.</p>
-      <h3>A Subheading</h3>
-      <p>More content...</p>
-    `
-  }
-}
-```
+- **Homepage bio / links** — `src/pages/Home.jsx`
+- **Reading List / Academic Writings content** — `src/pages/ReadingList.jsx`,
+  `src/pages/AcademicWritings.jsx`. Both are wrapped in the shared
+  `<StaticPage>` layout (`src/components/StaticPage.jsx`), so you only need
+  to write the content — the back-link, header, and footer come for free.
 
 #### Add External Hyperlinks
 
 Use `<a href="URL">` for external links:
 
-```html
+```jsx
 <a href="https://example.com">Link Text</a>
-```
-
-Example — to make "Academic Writings" link to a Google Doc:
-
-```html
-<a href="https://docs.google.com/your-doc-id">Academic Writings</a>
 ```
 
 #### Add Internal Page Links
@@ -124,20 +53,6 @@ Use `<Link to="/path">` for links within your site:
 ```jsx
 <Link to="/article/on-bertrand-russell">On Bertrand Russell</Link>
 ```
-
-#### HTML Tags for Article Content
-
-Inside the `content` string, use HTML:
-
-| Element | Code |
-|---------|------|
-| Paragraph | `<p>Your text here</p>` |
-| Subheading | `<h3>Heading</h3>` |
-| Bold | `<strong>bold text</strong>` |
-| Italic | `<em>italic text</em>` |
-| Link | `<a href="url">link text</a>` |
-| List | `<ul><li>Item 1</li><li>Item 2</li></ul>` |
-| Quote | `<blockquote>Quote text</blockquote>` |
 
 #### Change Colors
 
@@ -235,14 +150,22 @@ website/
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── articles/             # Drop a .jsx file here to publish an article
+│   │   ├── index.js          # Auto-loads every article file (no registration needed)
+│   │   ├── README.md         # Full guide to adding an article
+│   │   └── on-bertrand-russell.jsx
+│   ├── components/
+│   │   ├── StaticPage.jsx    # Shared layout: back-link, header, content, footer
+│   │   └── StaticPage.css
 │   ├── pages/
-│   │   ├── Home.jsx       # Landing page
+│   │   ├── Home.jsx          # Landing page
 │   │   ├── Home.css
-│   │   ├── Article.jsx    # Article template
-│   │   └── Article.css
-│   ├── App.jsx            # Router setup
-│   ├── main.jsx           # Entry point
-│   └── index.css          # Global styles
+│   │   ├── Article.jsx       # Renders any article by slug
+│   │   ├── ReadingList.jsx
+│   │   └── AcademicWritings.jsx
+│   ├── App.jsx                # Router setup
+│   ├── main.jsx                # Entry point
+│   └── index.css               # Global styles + shared page shell (.page/.page-card)
 ├── index.html
 ├── package.json
 ├── vite.config.js

@@ -1,23 +1,20 @@
 import { Link } from 'react-router-dom'
+import { articles } from '../articles'
 import './Home.css'
 
-const thoughts = [
-  { slug: 'on-bertrand-russell', title: 'On Bertrand Russell' },
-]
+const thoughts = articles.map(({ slug, title }) => ({ slug, title }))
 
 function Home() {
   return (
-    <main className="home">
-      <div className="container">
+    <main className="page">
+      <div className="page-card">
         <header className="header">
           <h1 className="name">Isaac A. Marchant</h1>
         </header>
 
         <section className="about">
-          <h2>About me</h2>
           <p>
-            I occasionally write things down. Amongst other things, this website is a place to store 
-            those writings.
+            A personal website to post on and for others to read, if they fancy.
           </p>
         </section>
 
@@ -35,12 +32,6 @@ function Home() {
         <section className="other">
           <h2>Other</h2>
           <ul className="other-list">
-            <li>
-              <Link to="/academic-writings">Academic Writings</Link>
-            </li>
-            <li>
-              <Link to="/topic-ideas">Topic Ideas</Link>
-            </li>
             <li>
               <Link to="/reading-list">Reading List</Link>
             </li>
