@@ -54,6 +54,12 @@
   margin-bottom: 1.25rem;
 }
 
+.article-content img {
+  max-width: 100%;
+  border-radius: 0px;
+  margin-bottom: 1.25rem;
+}
+
 .article-content h2,
 .article-content h3,
 .article-content h4,
@@ -141,3 +147,4 @@
     font-size: 1.5rem;
   }
 }
+

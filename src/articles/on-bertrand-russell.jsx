@@ -1,7 +1,7 @@
 export default {
   slug: 'on-bertrand-russell',
   title: 'On Bertrand Russell',
-  date: 'June 2020',
+  date: 'Jun 2020',
   content: (
     <>
       <p>Back in 2020 I thought a lot about Bertrand Russell's philosophy, and its importance to the modern world. This piece was originally published for a student political commentary website. What follows is my original introduction:</p>
