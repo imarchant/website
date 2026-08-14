@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { articles } from '../articles'
 import './Home.css'
+import coverImage from '../images/cover_photo.png'
 
 const thoughts = articles.map(({ slug, title }) => ({ slug, title }))
 

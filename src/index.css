@@ -17,7 +17,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 20px;
   scroll-behavior: smooth;
 }
 
@@ -64,7 +64,7 @@ a:hover {
 }
 
 .page-card {
-  max-width: 640px;
+  max-width: 760px;
   width: 100%;
   background-color: var(--bg-content);
   padding: 3.5rem 4rem;

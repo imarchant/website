@@ -6,7 +6,7 @@ function ReadingList() {
       <h3>Recently Read</h3>
       <ul>
         <li>
-        <i>Ursula K. Le Guin - The Laithe of Heaven</i>
+        <i>Ursula K. Le Guin - The Lathe of Heaven</i>
         </li>
       <t>Great sci-fi novel which looks at dreams, power, and utopia. Brave New World-esque vibes, highly recommend!</t>
       </ul>
@@ -17,7 +17,7 @@ function ReadingList() {
           <i>Leo Tolstoy - Anna Karenina</i>
         </li>
         <t>
-        Enjoying so far! Levin is a great character.
+        Enjoying so far!
         </t>
       </ul>
     </StaticPage>
